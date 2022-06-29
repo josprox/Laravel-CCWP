@@ -15,6 +15,9 @@ class SocialFactory extends Factory
         return [
 			'id_usuario' => $this->faker->name,
 			'info_datos' => $this->faker->name,
+			'fb' => $this->faker->name,
+			'twt' => $this->faker->name,
+			'inst' => $this->faker->name,
         ];
     }
 }

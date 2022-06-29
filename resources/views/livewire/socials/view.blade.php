@@ -34,6 +34,9 @@
 								<td>#</td> 
 								<th>Id Usuario</th>
 								<th>Info Datos</th>
+								<th>Fb</th>
+								<th>Twt</th>
+								<th>Inst</th>
 								<td>ACTIONS</td>
 							</tr>
 						</thead>
@@ -43,6 +46,9 @@
 								<td>{{ $loop->iteration }}</td> 
 								<td>{{ $row->id_usuario }}</td>
 								<td>{{ $row->info_datos }}</td>
+								<td>{{ $row->fb }}</td>
+								<td>{{ $row->twt }}</td>
+								<td>{{ $row->inst }}</td>
 								<td width="90">
 								<div class="btn-group">
 									<button type="button" class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

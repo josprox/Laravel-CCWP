@@ -56,7 +56,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a href="{{ url('/usuarios') }}" class="dropdown-item"><i class="fab fa-laravel text-info"></i> Usuarios</a> 
+                                    <a href="{{ url('/usuarios') }}" class="dropdown-item"><i class="fab fa-laravel text-info"></i> Alumnos</a> 
                                     
                                     <a href="{{ url('/maestros') }}" class="dropdown-item"><i class="fab fa-laravel text-info"></i> Maestros</a>
                                 </div>

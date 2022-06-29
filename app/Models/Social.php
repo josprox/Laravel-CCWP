@@ -13,6 +13,6 @@ class Social extends Model
 
     protected $table = 'social';
 
-    protected $fillable = ['id_usuario','info_datos'];
+    protected $fillable = ['id_usuario','info_datos','fb','twt','inst'];
 	
 }

@@ -18,6 +18,18 @@
                 <label for="info_datos"></label>
                 <input wire:model="info_datos" type="text" class="form-control" id="info_datos" placeholder="Info Datos">@error('info_datos') <span class="error text-danger">{{ $message }}</span> @enderror
             </div>
+            <div class="form-group">
+                <label for="fb"></label>
+                <input wire:model="fb" type="text" class="form-control" id="fb" placeholder="Fb">@error('fb') <span class="error text-danger">{{ $message }}</span> @enderror
+            </div>
+            <div class="form-group">
+                <label for="twt"></label>
+                <input wire:model="twt" type="text" class="form-control" id="twt" placeholder="Twt">@error('twt') <span class="error text-danger">{{ $message }}</span> @enderror
+            </div>
+            <div class="form-group">
+                <label for="inst"></label>
+                <input wire:model="inst" type="text" class="form-control" id="inst" placeholder="Inst">@error('inst') <span class="error text-danger">{{ $message }}</span> @enderror
+            </div>
 
                 </form>
             </div>

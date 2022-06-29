@@ -11,7 +11,7 @@ class Socials extends Component
     use WithPagination;
 
 	protected $paginationTheme = 'bootstrap';
-    public $selected_id, $keyWord, $id_usuario, $info_datos;
+    public $selected_id, $keyWord, $id_usuario, $info_datos, $fb, $twt, $inst;
     public $updateMode = false;
 
     public function render()
@@ -21,6 +21,9 @@ class Socials extends Component
             'socials' => Social::latest()
 						->orWhere('id_usuario', 'LIKE', $keyWord)
 						->orWhere('info_datos', 'LIKE', $keyWord)
+						->orWhere('fb', 'LIKE', $keyWord)
+						->orWhere('twt', 'LIKE', $keyWord)
+						->orWhere('inst', 'LIKE', $keyWord)
 						->paginate(10),
         ]);
     }
@@ -35,6 +38,9 @@ class Socials extends Component
     {		
 		$this->id_usuario = null;
 		$this->info_datos = null;
+		$this->fb = null;
+		$this->twt = null;
+		$this->inst = null;
     }
 
     public function store()
@@ -42,11 +48,17 @@ class Socials extends Component
         $this->validate([
 		'id_usuario' => 'required',
 		'info_datos' => 'required',
+		'fb' => 'required',
+		'twt' => 'required',
+		'inst' => 'required',
         ]);
 
         Social::create([ 
 			'id_usuario' => $this-> id_usuario,
-			'info_datos' => $this-> info_datos
+			'info_datos' => $this-> info_datos,
+			'fb' => $this-> fb,
+			'twt' => $this-> twt,
+			'inst' => $this-> inst
         ]);
         
         $this->resetInput();
@@ -61,6 +73,9 @@ class Socials extends Component
         $this->selected_id = $id; 
 		$this->id_usuario = $record-> id_usuario;
 		$this->info_datos = $record-> info_datos;
+		$this->fb = $record-> fb;
+		$this->twt = $record-> twt;
+		$this->inst = $record-> inst;
 		
         $this->updateMode = true;
     }
@@ -70,13 +85,19 @@ class Socials extends Component
         $this->validate([
 		'id_usuario' => 'required',
 		'info_datos' => 'required',
+		'fb' => 'required',
+		'twt' => 'required',
+		'inst' => 'required',
         ]);
 
         if ($this->selected_id) {
 			$record = Social::find($this->selected_id);
             $record->update([ 
 			'id_usuario' => $this-> id_usuario,
-			'info_datos' => $this-> info_datos
+			'info_datos' => $this-> info_datos,
+			'fb' => $this-> fb,
+			'twt' => $this-> twt,
+			'inst' => $this-> inst
             ]);
 
             $this->resetInput();
