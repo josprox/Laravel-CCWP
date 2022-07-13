@@ -22,6 +22,7 @@ Auth::routes(["register" => false]);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 //Route Hooks - Do not delete//
+	Route::view('tickets', 'livewire.tickets.index')->middleware('auth');
 	Route::view('socials', 'livewire.socials.index')->middleware('auth');
 	Route::view('notifications', 'livewire.notifications.index')->middleware('auth');
 	Route::view('classmodels', 'livewire.classmodels.index')->middleware('auth');

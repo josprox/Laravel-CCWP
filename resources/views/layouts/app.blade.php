@@ -42,6 +42,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a href="{{ url('/tickets') }}" class="dropdown-item"><i class="fab fa-laravel text-info"></i> Tickets</a> 
                                     <a href="{{ url('/gradgrups') }}" class="dropdown-item"><i class="fab fa-laravel text-info"></i> Grado y grupo</a> 
                                     <a href="{{ url('/sexos') }}" class="dropdown-item"><i class="fab fa-laravel text-info"></i> Sexos</a>
                                     <a href="{{ url('/especialidades') }}" class="dropdown-item"><i class="fab fa-laravel text-info"></i> Especialidades</a>
@@ -89,6 +90,9 @@
                             </li>
 						<!--Nav Bar Hooks - Do not delete!!-->
 						<!--<li class="nav-item">
+                            <a href="{{ url('/tickets') }}" class="nav-link"><i class="fab fa-laravel text-info"></i> Tickets</a> 
+                        </li>
+						<li class="nav-item">
                             <a href="{{ url('/socials') }}" class="nav-link"><i class="fab fa-laravel text-info"></i> Socials</a> 
                         </li>
 						<li class="nav-item">
